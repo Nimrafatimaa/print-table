@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            border: none;
+            box-shadow: 0px 0px 10px gray;
+            height: 30px;
+            width: 200px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            outline: none;
+            font-size: 14px;
+        }
+        button{
+            border-radius: 5px;
+            height: 30px;
+            width: 70px;
+            border: 1px solid grey;
+            background-color: lightsteelblue;
+        }
+    </style>
+</head>
+<body>
+  <center>
+    <h1>Multiplication Table Generator</h1>
+  <input type="number" class="number" placeholder="Please enter a number"> <br>
+  <button onclick="table()" class="btn">Click</button>
+  <hr>
+  <div class="print"></div>
+  </center>
+
+ <script>
+
+    function table(){
+        var printtable = document.querySelector('.print');
+   var getdata = document.querySelector(".number").value;
+        for(var i = 1; i<=10; i++){
+            printtable.innerHTML += getdata + ' ' +'x'+' '+ i + ' ' + '='+ ' ' + getdata * i + "<br>";
+        }
+    }
+
+ </script>
+    <!-- <script>
+        let user = prompt('please a number which table you want to print');
+         var res = i*number;
+        (`${number} x ${i} = ${res}`)
+        let i = 1;
+        for (let i = 1; i <= 10; i++) {
+            newarr = i*user;
+            console.log(newarr)
+        }
+    </script> -->
+</body>
+</html>
